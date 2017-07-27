@@ -12,14 +12,14 @@ export class AuthService {
   // make request to server endppoint(/register) with user which will be created  
   registerUser(user) {
 
-    return this.http.post("http://localhost:3000/register", user, { headers: this.headers }).map(res => {
+    return this.http.post("/register", user, { headers: this.headers }).map(res => {
       return res.json();
     });
   }
 
   // make request to server endpoint(/login) with user which will be checked in server side
   authenticateUser(user) {
-    return this.http.post("http://localhost:3000/login", user, { headers: this.headers }).map(res => {
+    return this.http.post("/login", user, { headers: this.headers }).map(res => {
       return res.json();
     });
   }
@@ -35,7 +35,7 @@ export class AuthService {
     // console.log(this.authToken);
     // jwt protected route [protected in server side]
 
-    return this.http.get("http://localhost:3000/profile", {
+    return this.http.get("/profile", {
       headers: headers
     }).map(res => {
       return res.json();
