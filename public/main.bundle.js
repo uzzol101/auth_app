@@ -233,7 +233,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dashboard works!\n</p>\n"
+module.exports = "<div class=\"jumbotron\">\n  <div class=\"container\">\n    <h1>Welcome to Dashboard</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In a quae, odit fugiat, velit consectetur illo iste, qui debitis dicta id magni animi. Ad iste, doloremque necessitatibus magni nemo maxime. </p>\n    <p>\n    </p>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -435,7 +435,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".navbar-right li:hover {\r\n  cursor: pointer;\r\n}\r\n", ""]);
 
 // exports
 
@@ -448,7 +448,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">Title</a>\n    </div>\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n      <ul class=\"nav navbar-nav\">\n        <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/'>Home</a></li>\n      </ul>\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li *ngIf=\"!authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/login'>Login</a></li>\n        <li *ngIf=\"authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/profile'>Profile</a></li>\n        <li *ngIf=\"authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/dashboard'>Dashboard</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/register'>Register</a></li>\n        <li *ngIf=\"authService.loggedIn()\"><a (click)=\"logoutClick()\">Logout</a></li>\n      </ul>\n    </div>\n    <!-- /.navbar-collapse -->\n  </div>\n</nav>\n<flash-messages></flash-messages>\n"
+module.exports = "<nav class=\"navbar navbar-inverse\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">Mean-Auth-App</a>\n    </div>\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n      <ul class=\"nav navbar-nav\">\n        <li routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/'>Home</a></li>\n      </ul>\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li *ngIf=\"!authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/login'>Login</a></li>\n        <li *ngIf=\"authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/profile'>Profile</a></li>\n        <li *ngIf=\"authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/dashboard'>Dashboard</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\"><a routerLink='/register'>Register</a></li>\n        <li *ngIf=\"authService.loggedIn()\"><a (click)=\"logoutClick()\">Logout</a></li>\n      </ul>\n    </div>\n    <!-- /.navbar-collapse -->\n  </div>\n</nav>\n<flash-messages></flash-messages>\n"
 
 /***/ }),
 
@@ -523,7 +523,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <h1>{{user.username}}</h1>\n</div>\n"
+module.exports = "<div *ngIf=\"user\">\n  <h1 class=\"text center\">{{user.username}}</h1>\n  <br>\n  <br>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">userEmail@email.com</li>\n    <li class=\"list-group-item\">Professional User</li>\n    <li class=\"list-group-item\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nam!</li>\n  </ul>\n</div>\n"
 
 /***/ }),
 
