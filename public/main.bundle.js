@@ -757,13 +757,13 @@ var AuthService = (function () {
     }
     // make request to server endppoint(/register) with user which will be created  
     AuthService.prototype.registerUser = function (user) {
-        return this.http.post("http://localhost:3000/register", user, { headers: this.headers }).map(function (res) {
+        return this.http.post("/register", user, { headers: this.headers }).map(function (res) {
             return res.json();
         });
     };
     // make request to server endpoint(/login) with user which will be checked in server side
     AuthService.prototype.authenticateUser = function (user) {
-        return this.http.post("http://localhost:3000/login", user, { headers: this.headers }).map(function (res) {
+        return this.http.post("/login", user, { headers: this.headers }).map(function (res) {
             return res.json();
         });
     };
@@ -774,7 +774,7 @@ var AuthService = (function () {
         headers.append('Authorization', this.authToken); // send jwt token with authorization header for verification
         // console.log(this.authToken);
         // jwt protected route [protected in server side]
-        return this.http.get("http://localhost:3000/profile", {
+        return this.http.get("/profile", {
             headers: headers
         }).map(function (res) {
             return res.json();
