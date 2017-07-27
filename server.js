@@ -13,7 +13,7 @@ app = express();
 let port = process.env.PORT || 3000;
 
 // configure mongoose database
-mongoose.connect('mongodb://127.0.0.1/mean_home');
+mongoose.connect('mongodb://uzzol101:m08520280@ds125183.mlab.com:25183/mean_home');
 var db = mongoose.connection;
 db.once('open', () => {
     console.log("Databse is online");
